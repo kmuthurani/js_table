@@ -26,17 +26,9 @@ function formhandling(e) {
 
     let tableBody = [];
 
-    //  for (const [index, value] of tablelist.entries()) {
-    //    let row = tableBody.insertRow();
-    //    let indexCell = row.insertCell();
-    //    let valueCell = row.insertCell();
-    //    indexCell.textContent = index;
-    //    valueCell.textContent = value;
-    //  }
-
     for (let index = 0; index < student_details.length; index++) {
         tableBody += `<tr>
-    <td>${index+1}</td>
+    <td>${index + 1}</td>
     <td>${student_details[index]?.name}</td>
     <td>${student_details[index]?.age}</td>
     <td>${student_details[index]?.Education}</td>
