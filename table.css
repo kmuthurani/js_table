@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+
+.form {
+    background-color: white;
+    font-family: 'Times New Roman', Times, serif;
+    border: 2px solid rgb(54, 50, 50);
+    margin: auto;
+    padding: 30px;
+}
+
+.form h3 {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.table th{
+    font-family: 'Times New Roman', Times, serif;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid gray;
+}
