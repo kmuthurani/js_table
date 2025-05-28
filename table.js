@@ -1,27 +1,6 @@
-let student_details = [];
-function formhandling(e) {
-    e.preventDefault();
-
-    var details = {
-        name: document.getElementById('name').value,
-        age: document.getElementById('age').value,
-        Education: document.getElementById("select").value,
-        address: document.getElementById('address').value,
-
-    };
-    student_details = [...student_details, details]
-    console.log("student", details)
-    //  alert("form submitted successfully!")
-    // let finallist = document.getElementById("finaldata")
-
-    // let getdetails = ""
-    // for (let key in details) {
-    // getdetails += `<p>${key} : ${details[key]}</p>` 
-    // }
-
-    // finallist.innerHTML = getdetails
-
-
+window.onload(() => {
+    let student_details = localStorage.getItem("student") !== undefined && JSON.parse(localStorage.getItem("student"))
+   
     let tablelist = document.getElementById("tabledata");
 
     let tableBody = [];
@@ -38,4 +17,4 @@ function formhandling(e) {
     }
 
     tablelist.innerHTML = tableBody;
-}
+})
