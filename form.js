@@ -3,24 +3,22 @@ let student_details = [];
 function formhandling(e) {
     e.preventDefault();
 
-    var details = {
+    const details = {
         name: document.getElementById('name').value,
         age: document.getElementById('age').value,
-        Education: document.getElementById("select").value,
-        address: document.getElementById('address').value,
-
+        Education: document.getElementById('select').value,
+        address: document.getElementById('address').value
     };
 
-    student_details = [...student_details, details]
+    student_details = JSON.parse(localStorage.getItem("student")) || [];
+    student_details.push(details);
 
-    localStorage.setItem("student", JSON.stringify(student_details))
+    localStorage.setItem("student", JSON.stringify(student_details));
 
-    // console.log("studentssss", student_details)
-
-    // e.target.reset();
+    e.target.reset(); // Clear form after submission
 }
 
 function route(e) {
     e.preventDefault();
-    window.location.href = './table.html'
+    window.location.href = './table.html';
 }
