@@ -1,6 +1,8 @@
-window.onload(() => {
+window.onload = function () {
     let student_details = localStorage.getItem("student") !== undefined && JSON.parse(localStorage.getItem("student"))
-   
+
+    console.log("surere", localStorage.getItem("student"))
+
     let tablelist = document.getElementById("tabledata");
 
     let tableBody = [];
@@ -17,4 +19,4 @@ window.onload(() => {
     }
 
     tablelist.innerHTML = tableBody;
-})
+};

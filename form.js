@@ -11,11 +11,10 @@ function formhandling(e) {
     };
 
     student_details = JSON.parse(localStorage.getItem("student")) || [];
-    student_details.push(details);
 
-    localStorage.setItem("student", JSON.stringify(student_details));
+    localStorage.setItem("student", JSON.stringify([...student_details, details]));
 
-    e.target.reset(); // Clear form after submission
+    e.target.reset();
 }
 
 function route(e) {
